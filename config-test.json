@@ -1,0 +1,6 @@
+{
+  "secret": {
+    "open_data_rtms_encoding_api_key": "{Your api key}",
+    "open_data_rtms_decoding_api_key": "{Your api key}"
+  }
+}
