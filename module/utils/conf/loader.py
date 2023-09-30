@@ -1,17 +1,14 @@
 import json
 
-from module import PUDATA_HOME
+from module.utils.conf import get_conf_file_path
 
 
-class LocalConfigLoader:
-    def __init__(self):
-        self.config_path = PUDATA_HOME + "/config.json"
-    def get_secret_config(self, key_name: str) -> dict:
-        """
+def get_config_values(section: str, key_name: str) -> dict:
+    """
 
-        :return: {'a_api_key': '***', 'b_api_key': '***'}
-        """
-        with open(self.config_path) as f:
-            secrets = json.load(f).get("secrets")
+    :return: {'a_api_key': '***', 'b_api_key': '***'}
+    """
+    with open(get_conf_file_path(), encoding="utf-8") as file:
+        secrets = json.load(file).get(section)
 
-        return secrets.get(key_name)
+    return secrets.get(key_name)
