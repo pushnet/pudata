@@ -1,6 +1,10 @@
 {
-  "secret": {
-    "open_data_rtms_encoding_api_key": "{Your api key}",
-    "open_data_rtms_decoding_api_key": "{Your api key}"
+  "secrets": {
+    "open_data_encoding_api_key": "{Your api key}",
+    "open_data_decoding_api_key": "{Your api key}",
+    "telegram_pushnet_airflow_bot_token": "{Your api key}"
+  },
+  "variables": {
+    "telegram_pushnet_chat_id": {Your chat id}
   }
 }
